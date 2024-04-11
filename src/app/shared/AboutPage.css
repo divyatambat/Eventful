@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif
+}
+body
+{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #16384c;
+}
+
+.card-container {  
+  margin-top: 5rem;
+  margin-bottom: 6.5rem;
+  display: grid;
+    gap: 10rem;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill,minmax(270px,auto));
+}
+
+.container .card
+{
+    height: 215px;
+    width: 300px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover
+{
+    height: 400px;
+}
+.container .card .imgContainer
+{
+    position: relative;
+    height:250px;
+    top:-50px;
+    left:10px;
+    z-index: 1;
+}
+.container .card .imgContainer img
+{
+    max-width: 90%;
+    border-radius: 4px;
+}
+.names {
+  font-style: bold;
+  color: rgb(2, 96, 96);
+}
+.container .card .content
+{
+    width: 80%;  
+    margin: auto;
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover .content
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+@media (max-width: 330px){
+    .container .card .imgContainer{
+        left: -2px;
+    }
+}

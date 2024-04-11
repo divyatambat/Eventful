@@ -1,0 +1,42 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin-right: 100px;
+}
+
+/* Footer Styles */
+.footer {
+  position:relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: teal;
+  color: #d6dfed; 
+}
+
+/* Brand and Copyright Styling */
+.brand-copyright {
+  color: inherit;
+}
+
+/* Social Icons Styling */
+.social-links a {
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.1); 
+  color: #fff; 
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-left: 100px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

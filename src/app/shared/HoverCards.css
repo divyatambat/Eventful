@@ -1,0 +1,99 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 30px 30px;
+  grid-auto-rows: 1fr;
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s ease; 
+}
+
+.cards:hover { 
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cards .display-over {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  transition: background-color 350ms ease;
+  background-color: transparent;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: #000000; 
+}
+
+.cards:hover .display-over {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.cards .big-title { 
+  text-transform: uppercase;
+  font-family: "Helvetica", sans-serif;
+  margin-bottom: 20px;
+  font-size: 2rem; 
+  font-weight: bold;
+}
+
+.cards .hover { 
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.cards:hover .hover {
+  opacity: 1;
+}
+
+.cards .sub-title,
+.cards .paragraph { 
+  font-family: "Helvetica", sans-serif; 
+  transform: translate3d(0, 50px, 0);
+  transition: transform 350ms ease;
+  margin-bottom: 10px;
+}
+
+.cards:hover .sub-title,
+.cards:hover .paragraph {
+  transform: translate3d(0, 0, 0); 
+}
+
+.book-button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.book-button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}

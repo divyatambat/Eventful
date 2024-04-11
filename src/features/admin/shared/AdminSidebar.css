@@ -1,0 +1,29 @@
+.sidebar {
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .sidebar.collapsed {
+    width: 80px;
+  }
+  
+  .sidebar.expanded {
+    width: 200px;
+  }
+  
+  .ant-menu-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ant-menu-item .ant-menu-title-content {
+    flex: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .sidebar.collapsed .ant-menu-item .ant-menu-title-content {
+    opacity: 0;
+  }
+  
+  .sidebar.expanded .ant-menu-item .ant-menu-title-content {
+    opacity: 1;
+  }
